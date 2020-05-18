@@ -186,8 +186,6 @@ Wire Wire Line
 Wire Wire Line
 	3275 1575 3275 1275
 Connection ~ 3275 1275
-Wire Wire Line
-	3275 1275 4200 1275
 $Comp
 L power:GND #PWR02
 U 1 1 5EBBE1BA
@@ -228,7 +226,7 @@ F 4 "0805X475M250CT" H 5550 1650 50  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 1275 5550 1275
+	4900 1275 5150 1275
 Wire Wire Line
 	5550 1500 5550 1275
 Connection ~ 5550 1275
@@ -325,7 +323,7 @@ Wire Wire Line
 Wire Wire Line
 	5025 4450 5025 4725
 Wire Wire Line
-	4875 4250 5350 4250
+	4875 4250 5175 4250
 Wire Wire Line
 	5350 4325 5350 4250
 Wire Wire Line
@@ -492,4 +490,97 @@ F 4 "OS102011MA1QN1" H 2750 6375 50  0001 C CNN "MPN"
 	1    2750 6375
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5EC2956E
+P 3900 1275
+F 0 "TP2" H 3958 1393 50  0000 L CNN
+F 1 "VBUS" H 3950 1475 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4100 1275 50  0001 C CNN
+F 3 "~" H 4100 1275 50  0001 C CNN
+	1    3900 1275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5EC29D29
+P 5150 1275
+F 0 "TP4" H 5208 1393 50  0000 L CNN
+F 1 "VBAT" H 5200 1475 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5350 1275 50  0001 C CNN
+F 3 "~" H 5350 1275 50  0001 C CNN
+	1    5150 1275
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 1275
+Wire Wire Line
+	5150 1275 5550 1275
+Connection ~ 3900 1275
+Wire Wire Line
+	3900 1275 4200 1275
+Wire Wire Line
+	3275 1275 3900 1275
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5EC2AF2B
+P 5175 4250
+F 0 "TP5" H 5233 4368 50  0000 L CNN
+F 1 "+12V" H 5225 4450 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5375 4250 50  0001 C CNN
+F 3 "~" H 5375 4250 50  0001 C CNN
+	1    5175 4250
+	1    0    0    -1  
+$EndComp
+Connection ~ 5175 4250
+Wire Wire Line
+	5175 4250 5350 4250
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5EC2B370
+P 4950 3575
+F 0 "TP3" H 5008 3693 50  0000 L CNN
+F 1 "SW" H 5000 3775 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 5150 3575 50  0001 C CNN
+F 3 "~" H 5150 3575 50  0001 C CNN
+	1    4950 3575
+	1    0    0    -1  
+$EndComp
+Connection ~ 4950 3575
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5EC2BF46
+P 2950 1975
+F 0 "TP1" H 3008 2093 50  0000 L CNN
+F 1 "GND" H 3000 2175 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3150 1975 50  0001 C CNN
+F 3 "~" H 3150 1975 50  0001 C CNN
+	1    2950 1975
+	-1   0    0    1   
+$EndComp
+Connection ~ 2950 1975
+NoConn ~ 2950 6275
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5EC47C3E
+P 8775 1750
+F 0 "J2" H 8855 1792 50  0000 L CNN
+F 1 "Conn_01x01" H 8855 1701 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 8775 1750 50  0001 C CNN
+F 3 "~" H 8775 1750 50  0001 C CNN
+	1    8775 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5EC496C7
+P 8775 1975
+F 0 "J3" H 8855 2017 50  0000 L CNN
+F 1 "Conn_01x01" H 8855 1926 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 8775 1975 50  0001 C CNN
+F 3 "~" H 8775 1975 50  0001 C CNN
+	1    8775 1975
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8575 1975
+NoConn ~ 8575 1750
 $EndSCHEMATC
