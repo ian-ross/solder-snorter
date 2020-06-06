@@ -135,23 +135,23 @@ STAT is low when charging,\nhigh when charged:\nD1 = red\nD2 = green
 $Comp
 L Device:LED D1
 U 1 1 5EBB3A5D
-P 3550 1575
-F 0 "D1" H 3725 1450 50  0000 C CNN
-F 1 "LED" H 3700 1525 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3550 1575 50  0001 C CNN
-F 3 "~" H 3550 1575 50  0001 C CNN
-	1    3550 1575
+P 3500 1575
+F 0 "D1" H 3500 1400 50  0000 C CNN
+F 1 "LED" H 3500 1475 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3500 1575 50  0001 C CNN
+F 3 "~" H 3500 1575 50  0001 C CNN
+	1    3500 1575
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D2
 U 1 1 5EBB48F6
-P 3550 1800
-F 0 "D2" H 3675 1750 50  0000 C CNN
-F 1 "LED" H 3700 1675 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3550 1800 50  0001 C CNN
-F 3 "~" H 3550 1800 50  0001 C CNN
-	1    3550 1800
+P 3500 1800
+F 0 "D2" H 3500 1675 50  0000 C CNN
+F 1 "LED" H 3500 1600 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3500 1800 50  0001 C CNN
+F 3 "~" H 3500 1800 50  0001 C CNN
+	1    3500 1800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -159,35 +159,19 @@ Wire Wire Line
 $Comp
 L Device:R R1
 U 1 1 5EBB92B4
-P 3975 1675
-F 0 "R1" V 3768 1675 50  0000 C CNN
-F 1 "470" V 3859 1675 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3905 1675 50  0001 C CNN
-F 3 "https://www.mouser.at/datasheet/2/427/crcwce3-1762584.pdf" H 3975 1675 50  0001 C CNN
-F 4 "CRCW0805470RFKEAC" H 3975 1675 50  0001 C CNN "MPN"
-	1    3975 1675
+P 3900 1575
+F 0 "R1" V 3725 1575 50  0000 C CNN
+F 1 "470" V 3800 1575 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3830 1575 50  0001 C CNN
+F 3 "https://www.mouser.at/datasheet/2/427/crcwce3-1762584.pdf" H 3900 1575 50  0001 C CNN
+F 4 "CRCW0805470RFKEAC" H 3900 1575 50  0001 C CNN "MPN"
+	1    3900 1575
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	4125 1675 4200 1675
 Wire Wire Line
-	3825 1675 3750 1675
-Wire Wire Line
-	3750 1675 3750 1575
-Wire Wire Line
-	3750 1575 3700 1575
-Wire Wire Line
-	3700 1800 3750 1800
-Wire Wire Line
-	3750 1800 3750 1675
-Connection ~ 3750 1675
-Wire Wire Line
 	2550 1275 2950 1275
-Wire Wire Line
-	3400 1575 3275 1575
-Wire Wire Line
-	3275 1575 3275 1275
-Connection ~ 3275 1275
 $Comp
 L power:GND #PWR02
 U 1 1 5EBBE1BA
@@ -200,14 +184,10 @@ F 3 "" H 3250 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 1800 3250 1800
-Wire Wire Line
 	3250 1800 3250 1975
 Wire Wire Line
 	2950 1500 2950 1275
 Connection ~ 2950 1275
-Wire Wire Line
-	2950 1275 3275 1275
 Wire Wire Line
 	2950 1800 2950 1975
 Wire Wire Line
@@ -520,8 +500,6 @@ Wire Wire Line
 Connection ~ 3900 1275
 Wire Wire Line
 	3900 1275 4200 1275
-Wire Wire Line
-	3275 1275 3900 1275
 $Comp
 L Connector:TestPoint TP5
 U 1 1 5EC2AF2B
@@ -562,27 +540,61 @@ $EndComp
 Connection ~ 2950 1975
 NoConn ~ 2950 6275
 $Comp
-L Connector_Generic:Conn_01x01 J2
-U 1 1 5EC47C3E
-P 8775 1750
-F 0 "J2" H 8855 1792 50  0000 L CNN
-F 1 "Conn_01x01" H 8855 1701 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 8775 1750 50  0001 C CNN
-F 3 "~" H 8775 1750 50  0001 C CNN
-	1    8775 1750
+L Device:R R3
+U 1 1 5ED56DDF
+P 3900 1800
+F 0 "R3" V 4000 1800 50  0000 C CNN
+F 1 "470" V 4075 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3830 1800 50  0001 C CNN
+F 3 "https://www.mouser.at/datasheet/2/427/crcwce3-1762584.pdf" H 3900 1800 50  0001 C CNN
+F 4 "CRCW0805470RFKEAC" H 3900 1800 50  0001 C CNN "MPN"
+	1    3900 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 1575 4125 1575
+Wire Wire Line
+	4125 1575 4125 1675
+Wire Wire Line
+	4125 1800 4050 1800
+Connection ~ 4125 1675
+Wire Wire Line
+	4125 1675 4125 1800
+Wire Wire Line
+	2950 1275 3250 1275
+Wire Wire Line
+	3250 1800 3350 1800
+Wire Wire Line
+	3350 1575 3250 1575
+Wire Wire Line
+	3250 1575 3250 1275
+Connection ~ 3250 1275
+Wire Wire Line
+	3250 1275 3900 1275
+Wire Wire Line
+	3650 1575 3750 1575
+Wire Wire Line
+	3650 1800 3750 1800
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5ED603EE
+P 8450 1900
+F 0 "H1" H 8550 1946 50  0000 L CNN
+F 1 "MountingHole" H 8550 1855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 8450 1900 50  0001 C CNN
+F 3 "~" H 8450 1900 50  0001 C CNN
+	1    8450 1900
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J3
-U 1 1 5EC496C7
-P 8775 1975
-F 0 "J3" H 8855 2017 50  0000 L CNN
-F 1 "Conn_01x01" H 8855 1926 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 8775 1975 50  0001 C CNN
-F 3 "~" H 8775 1975 50  0001 C CNN
-	1    8775 1975
+L Mechanical:MountingHole H2
+U 1 1 5ED6078F
+P 8450 2150
+F 0 "H2" H 8550 2196 50  0000 L CNN
+F 1 "MountingHole" H 8550 2105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 8450 2150 50  0001 C CNN
+F 3 "~" H 8450 2150 50  0001 C CNN
+	1    8450 2150
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8575 1975
-NoConn ~ 8575 1750
 $EndSCHEMATC
